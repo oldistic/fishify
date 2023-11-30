@@ -13,3 +13,6 @@
 - Khisal (A465BSY2235) - Mobile Development - Putera Batam University
 
 File for each path:
+- [Machine Learning](https://github.com/oldistic/fishify/tree/machine-learning)
+- [Mobile Development](https://github.com/oldistic/fishify/tree/mobile-development)
+- [Cloud Computing](https://github.com/oldistic/fishify/main)
