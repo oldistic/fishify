@@ -15,4 +15,4 @@
 File for each path:
 - [Machine Learning](https://github.com/oldistic/fishify/tree/machine-learning)
 - [Mobile Development](https://github.com/oldistic/fishify/tree/mobile-development)
-- [Cloud Computing](https://github.com/oldistic/fishify/main)
+- [Cloud Computing](https://github.com/oldistic/fishify/tree/main)
