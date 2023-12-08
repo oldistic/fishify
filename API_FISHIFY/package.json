@@ -19,5 +19,8 @@
     "hapi-pino": "^12.1.0",
     "jsonwebtoken": "^9.0.2",
     "mysql2": "^3.6.5"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3"
   }
 }
