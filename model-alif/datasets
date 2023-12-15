@@ -1,6 +1,0 @@
-!pip install roboflow
-
-from roboflow import Roboflow
-rf = Roboflow(api_key="mdWtFvY9KQS6pKYeisNl")
-project = rf.workspace("capstone-a3t6l").project("fish-detection-smrvn")
-dataset = project.version(2).download("tfrecord")
