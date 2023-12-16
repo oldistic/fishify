@@ -8,7 +8,7 @@
 - Brian Natanael Nainggolan (M465BSY0647) - Machine Learning - Putera Batam University 
 
 ### Datasets
-We collected our datasets 13 kind of consumable fish in Indonesia that we collected alone and also from public datasets. We got 1560 data (image) in total.
+We collected our datasets 10 kind of consumable fish in Indonesia that we collected alone and also from public datasets. We got ... data (image) in total.
 
 The distribution of the data:
 1. Udang : 
