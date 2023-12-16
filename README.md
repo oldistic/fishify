@@ -11,19 +11,16 @@
 We collected our datasets 13 kind of consumable fish in Indonesia that we collected alone and also from public datasets. We got 1560 data (image) in total.
 
 The distribution of the data:
-1. Udang : 120
-2. Ikan tuna : 120
-3. Ikan tongkol : 120
-4. Ikan tenggiri : 120
-5. Ikan nila : 120
-6. Ikan mujair : 120
-7. Ikan mas : 120
-8. Ikan lele : 120
-9. Ikan kembung : 120
-10. Ikan kakap : 120
-11. Ikan guarame : 120
-12. Belut : 120
-13. Ikan bawal : 120
+1. Udang : 
+2. Ikan Tenggiri :
+3. Ikan Patin
+4. Ikan Nila : 
+5. Ikan Mas : 
+6. Ikan Lele : 
+7. Ikan Kembung : 
+8. Ikan guarame :
+9. Belut :
+10. Ikan bawal :
 
 ### Techonology
 To develop this machine learning model we use Convolutional Neural Netwotk algorithm.
