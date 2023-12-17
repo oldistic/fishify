@@ -24,3 +24,6 @@ The distribution of the data:
 
 ### Techonology
 To develop this machine learning model we use Convolutional Neural Netwotk algorithm, and MobileNetV2 as a transfer learning.
+
+### Documentation
+![Screenshot 2023-12-18 014335](https://github.com/oldistic/fishify/assets/85356593/9bcf0874-8918-4938-832a-f8714f394bcc)
