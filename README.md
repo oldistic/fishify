@@ -8,19 +8,19 @@
 - Brian Natanael Nainggolan (M465BSY0647) - Machine Learning - Putera Batam University 
 
 ### Datasets
-We collected our datasets 10 kind of consumable fish in Indonesia that we collected alone and also from public datasets. We got ... data (image) in total.
+We collected our datasets 10 kind of consumable fish in Indonesia that we collected alone and also from public datasets. We got 2950 data (image) in total we split into 2500 images on training and 450 images on validation.
 
 The distribution of the data:
-1. Udang : 
-2. Ikan Tenggiri :
-3. Ikan Patin
-4. Ikan Nila : 
-5. Ikan Mas : 
-6. Ikan Lele : 
-7. Ikan Kembung : 
-8. Ikan guarame :
-9. Belut :
-10. Ikan bawal :
+1. Udang : 295
+2. Ikan Tenggiri : 295
+3. Ikan Patin : 295
+4. Ikan Nila : 295
+5. Ikan Mas : 295
+6. Ikan Lele : 295
+7. Ikan Kembung : 295
+8. Ikan Guarame : 295
+9. Belut : 295
+10. Ikan Bawal : 295
 
 ### Techonology
-To develop this machine learning model we use Convolutional Neural Netwotk algorithm.
+To develop this machine learning model we use Convolutional Neural Netwotk algorithm, and MobileNetV2 as a transfer learning.
