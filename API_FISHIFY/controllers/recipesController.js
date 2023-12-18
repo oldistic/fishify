@@ -1,22 +1,37 @@
 const recipesData = require('../data/recipes');
 
+// Fungsi untuk mendapatkan resep berdasarkan ID
 const getRecipeById = (request, h) => {
   try {
     const recipeId = request.params.id;
-
-    // Cari resep berdasarkan ID dalam data statis
-    const recipe = recipesData.find((recipe) => recipe.id === recipeId);
+    const recipe = recipesData.find((r) => r.id === recipeId);
 
     if (!recipe) {
-      return h.response({ message: 'Resep tidak ditemukan' }).code(404);
+      return h.response({ message: 'Recipe not found' }).code(404);
     }
 
-    // Mengembalikan data resep
     return h.response(recipe).code(200);
   } catch (error) {
     console.error(error);
-    return h.response({ message: 'Terjadi kesalahan server' }).code(500);
+    return h.response({ message: 'Internal Server Error' }).code(500);
   }
 };
 
-module.exports = { getRecipeById };
+// Fungsi untuk mendapatkan resep berdasarkan nama
+const getRecipeByName = (request, h) => {
+  try {
+    const recipeName = request.params.name;
+    const recipe = recipesData.find((r) => r.name.toLowerCase() === recipeName.toLowerCase());
+
+    if (!recipe) {
+      return h.response({ message: 'Recipe not found' }).code(404);
+    }
+
+    return h.response(recipe).code(200);
+  } catch (error) {
+    console.error(error);
+    return h.response({ message: 'Internal Server Error' }).code(500);
+  }
+};
+
+module.exports = { getRecipeById, getRecipeByName };
