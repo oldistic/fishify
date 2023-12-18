@@ -4,6 +4,7 @@ const { testConnection } = require('./config/database');
 const authRoutes = require('./routes/authRoutes');
 const userRoutes = require('./routes/userRoutes');
 const recipesRoutes = require('./routes/recipesRoutes');
+const mlRoutes = require('./routes/mlRoutes');
 
 const init = async () => {
   try {
@@ -42,14 +43,12 @@ const initServer = async () => {
     plugin: require('hapi-bodyparser'),
   });
 
-  // Daftar routes dari authRoutes, userRoutes, dan recipesRoutes
-  const routes = [...authRoutes, ...userRoutes, ...recipesRoutes];
+  const routes = [...authRoutes, ...userRoutes, ...recipesRoutes, ...mlRoutes];
   server.route(routes);
 
   return server;
 };
 
-// Memastikan kode ini hanya dijalankan jika berkas ini dijalankan langsung (bukan diimpor sebagai modul)
 if (require.main === module) {
   // Panggil fungsi init untuk memulai aplikasi
   init();
