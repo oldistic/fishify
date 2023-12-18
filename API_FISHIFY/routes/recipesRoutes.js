@@ -13,4 +13,4 @@ const recipesRoutes = [
     },
   ];
 
-module.exports = recipeRoutes;
+module.exports = recipesRoutes;
