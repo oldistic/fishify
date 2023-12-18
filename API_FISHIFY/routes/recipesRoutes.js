@@ -1,17 +1,16 @@
 const { getRecipes, getRecipeById } = require('../controllers/recipesController');
 
-const recipeRoutes = [
-  {
-    method: 'GET',
-    path: '/recipes',
-    handler: getRecipes,
-  },
-  {
-    method: 'GET',
-    path: '/recipes/{id}',
-    handler: getRecipeById,
-  },
-  // Tambah routes lainnya sesuai kebutuhan
-];
+const recipesRoutes = [
+    {
+      method: 'GET',
+      path: '/recipes/{id}',
+      handler: getRecipeById,
+    },
+    {
+      method: 'GET',
+      path: '/recipes/name/{name}',
+      handler: getRecipeByName,
+    },
+  ];
 
 module.exports = recipeRoutes;
