@@ -1,9 +1,9 @@
 const { Storage } = require('@google-cloud/storage');
 const axios = require('axios');
 
-const projectId = 'your-project-id'; // Ganti dengan ID proyek Google Cloud Anda
-const bucketName = 'your-bucket-name'; // Ganti dengan nama bucket Cloud Storage Anda
-const cloudRunEndpoint = 'https://your-cloud-run-endpoint'; // Ganti dengan URL Cloud Run Anda
+const projectId = 'loyal-world-406507'; // Ganti dengan ID proyek Google Cloud Anda
+const bucketName = 'fishify'; // Ganti dengan nama bucket Cloud Storage Anda
+const cloudRunEndpoint = 'https://fishify-ml-vdvzsu6mbq-uc.a.run.app'; // Ganti dengan URL Cloud Run Anda
 
 const storage = new Storage({ projectId });
 const bucket = storage.bucket(bucketName);
