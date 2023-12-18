@@ -1,4 +1,4 @@
-const { getRecipes, getRecipeById } = require('../controllers/recipesController');
+const { getRecipeById, getRecipeByName } = require('../controllers/recipesController');
 
 const recipesRoutes = [
     {
