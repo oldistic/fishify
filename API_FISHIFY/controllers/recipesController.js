@@ -3,7 +3,7 @@ const recipesData = require('../data/recipes');
 // Fungsi untuk mendapatkan resep berdasarkan ID
 const getRecipeById = (request, h) => {
   try {
-    const recipeId = request.params.id;
+    const recipeId = parseInt(request.params.id);
     const recipe = recipesData.find((r) => r.id === recipeId);
 
     if (!recipe) {
@@ -20,8 +20,8 @@ const getRecipeById = (request, h) => {
 // Fungsi untuk mendapatkan resep berdasarkan nama
 const getRecipeByName = (request, h) => {
   try {
-    const recipeName = request.params.name;
-    const recipe = recipesData.find((r) => r.name.toLowerCase() === recipeName.toLowerCase());
+    const recipeName = request.params.name.toLowerCase();
+    const recipe = recipesData.find((r) => r.name.toLowerCase() === recipeName);
 
     if (!recipe) {
       return h.response({ message: 'Recipe not found' }).code(404);
