@@ -3,6 +3,7 @@ const HapiPino = require('hapi-pino');
 const { testConnection } = require('./config/database');
 const authRoutes = require('./routes/authRoutes');
 const userRoutes = require('./routes/userRoutes');
+const recipesRoutes = require('./routes/recipesRoutes');
 
 const init = async () => {
   try {
@@ -41,8 +42,8 @@ const initServer = async () => {
     plugin: require('hapi-bodyparser'),
   });
 
-  // Daftar routes dari authRoutes, userRoutes, and loginRoutes
-  const routes = [...authRoutes, ...userRoutes];
+  // Daftar routes dari authRoutes, userRoutes, dan recipesRoutes
+  const routes = [...authRoutes, ...userRoutes, ...recipesRoutes];
   server.route(routes);
 
   return server;
