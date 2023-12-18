@@ -12,8 +12,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@google-cloud/storage": "^7.7.0",
     "@hapi/hapi": "^21.3.2",
     "@hapi/joi": "^17.1.1",
+    "axios": "^1.6.2",
     "bcrypt": "^5.1.1",
     "hapi-bodyparser": "^2.1.2",
     "hapi-pino": "^12.1.0",
