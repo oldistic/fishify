@@ -7,10 +7,11 @@ const cloudRunEndpoint = 'https://fishify-ml-vdvzsu6mbq-uc.a.run.app'; // Ganti 
 
 const storage = new Storage({ projectId });
 const bucket = storage.bucket(bucketName);
+const cloudStoragePath = 'upload_picture'; // Ganti dengan path yang diinginkan di dalam bucket
 
 const uploadToCloudStorage = async (fileBuffer, fileName) => {
   try {
-    const file = bucket.file(fileName);
+    const file = bucket.file(`${cloudStoragePath}/${fileName}`);
     await file.save(fileBuffer);
 
     console.log(`File ${fileName} uploaded to Cloud Storage`);
