@@ -688,8 +688,6 @@ const recipes = [
           '1 ekor ikan mas',
           '1 sdt garam',
           '1 buah jeruk nipis ambil airnya',
-        ],
-        sambalIngredients: [
           '1 ruas kencur',
           '1 ruas jahe',
           '9 bawang merah, goreng setengah matang',
@@ -720,8 +718,6 @@ const recipes = [
           'Asem kandis secukupnya',
           '30 ml santan kental',
           'Garam, gula secukupnya',
-        ],
-        spiceIngredients: [
           '8 siung bawang merah',
           '5 siung bawang putih',
           '3 butir kemiri',
@@ -752,8 +748,6 @@ const recipes = [
           'Cabe rawit utuh',
           '2 buah tomat, dipotong',
           'Air matang secukupnya',
-        ],
-        spiceIngredients: [
           '6 siung bawang merah',
           '3 siung bawang putih',
           '4 kemiri',
@@ -774,23 +768,17 @@ const recipes = [
         ingredients: [
           '2 Ekor ikan mas berukuran sedang',
           '1 buah jeruk nipis',
-        ],
-        spiceIngredients: [
           '2 buah cabe merah',
           '5 siung bawang putih',
           '6 siung bawang merah',
           '2 butir Kemiri',
           '1 ruas kunyit',
           '1 ruas jahe',
-        ],
-        kitchenSeasoningIngredients: [
           '3 lembar daun jeruk',
           '2 lembar daun salam',
           '1 potong lengkuas, memarkan',
           '1 batang serai, memarkan',
           '10 buah cabe rawit',
-        ],
-        otherIngredients: [
           'Minyak goreng',
           'Gula pasir',
           'Garam/kaldu bubuk',
@@ -842,8 +830,6 @@ const recipes = [
           'Garam secukupnya',
           'Penyedap rasa secukupnya',
           'Minyak goreng secukupnya',
-        ],
-        spiceIngredients: [
           '4 butir kemiri',
           '2 buah cabai merah',
           '4 butir bawang merah',
@@ -867,18 +853,12 @@ const recipes = [
           'Minyak goreng secukupnya',
           'Gula, garam, dan kaldu jamur secukupnya',
           'Cabai rawit',
-        ],
-        seasoningIngredients: [
           '2 lembar daun salam',
           '3 lembar daun jeruk',
           '1 batang serai',
           '5 cm lengkuas',
-        ],
-        marinationIngredients: [
           'Garam secukupnya',
           '1 ruas jari jahe',
-        ],
-        spiceIngredients: [
           '8 siung bawang merah',
           '3 siung bawang putih',
           '1/s sdt merica',
@@ -909,8 +889,6 @@ const recipes = [
           '½ sdt gula',
           '1 sdt merica',
           '50 ml minyak goreng',
-        ],
-        spiceIngredients: [
           '7 siung bawang putih',
           '7 cabai merah keriting',
           '3 cm jahe',
@@ -940,8 +918,6 @@ const recipes = [
           '½ sdt merica',
           '2 sdm minyak goreng, untuk menumis',
           'Minyak goreng, untuk menggoreng - secukupnya',
-        ],
-        spiceIngredients: [
           '5 butir bawang merah',
           '4 siung bawang putih',
           '3 butir kemiri',
@@ -971,8 +947,6 @@ const recipes = [
           '1 sdt gula pasir',
           '1 sdt lada bubuk',
           '300 ml air',
-        ],
-        spiceIngredients: [
           '5 siung bawang merah',
           '2 siung bawang putih',
           '5 buah cabai rawit merah',
@@ -1004,8 +978,6 @@ const recipes = [
           '15 btr cabe rawit utuh',
           'serantang daun kemangi',
           'secukupnya garam, gula, air',
-        ],
-        spiceIngredients: [
           '10 btr bawang merah',
           '4 siung bawang putih',
           '5 bh cabe merah keriting',
@@ -1032,8 +1004,6 @@ const recipes = [
           '1 buah tomat',
           'secukupnya garam',
           'secukupnya gula',
-        ],
-        spiceIngredients: [
           '3 buah bawang merah',
           '100 gr cabai merah keriting',
           '5 buah cabai rawit merah',
@@ -1054,15 +1024,11 @@ const recipes = [
           '250 gr udang',
           '1 buah jagung manis',
           '1 siung bawang bombay, iris kasar',
-        ],
-        spiceIngredients: [
           '5 siung bawang merah',
           '4 siung bawang putih',
           '4 buah cabai merah keriting',
           'Seiris jahe',
           'Seiris kunyit',
-        ],
-        sauceIngredients: [
           '5 sdm saus sambal',
           '1 sdm saus tiram',
           '1 buah tomat matang (blender halus)',
@@ -1093,8 +1059,6 @@ const recipes = [
           '1 sdm kaldu bubuk',
           '130 ml santan encer',
           '100 ml santan kental',
-        ],
-        spiceIngredients: [
           '4 buah cabai merah',
           '5 siung bawang merah',
           '4 siung bawang putih',
@@ -1135,8 +1099,8 @@ const recipes = [
       {
         id: 40,
         name: 'Udang Bakar Jimbaran',
-        ingredients: ['500 gram udang besar'],
-        bastingIngredients: [
+        ingredients: [
+          '500 gram udang besar',
           '4-5 siung bawang putih',
           '1/2 siung bawang bombay',
           '3 sdm potongan nanas manis',
@@ -1147,8 +1111,6 @@ const recipes = [
           '1/4 sdt lada bubuk',
           'garam dan gula secukupnya',
           'minyak goreng secukupnya',
-        ],
-        sambalIngredients: [
           '1 siung bawang putih',
           '1 buah tomat merah',
           '3 cm mentimun buang bijinya',
