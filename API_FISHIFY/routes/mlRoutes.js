@@ -4,19 +4,14 @@ const Joi = require('@hapi/joi');
 const mlRoutes = [
   {
     method: 'POST',
-    path: '/upload-image',
-    options: {
-      payload: {
-        output: 'stream',
-        parse: true,
-        allow: 'multipart/form-data',
-        maxBytes: 10 * 1024 * 1024, // Set batas ukuran file (10MB)
-      },
-      validate: {
-        payload: Joi.object({
-          image: Joi.any().required(),
-        }),
-      },
+    path: '/upload',
+   options: {
+    payload: {
+      parse: true,
+      output: 'data',
+      maxBytes: 209715200, // 200MB
+      multipart: { output: 'file' },
+    },
     },
     handler: async (request, h) => {
       try {
