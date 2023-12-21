@@ -10,7 +10,7 @@ const mlRoutes = [
         output: 'stream',
         parse: true,
         allow: 'multipart/form-data',
-        maxBytes: 10 * 1024 * 1024, // Set file size limit to 10MB
+        maxBytes: 10 * 1024 * 1024, // Set batas ukuran file (10MB)
       },
       validate: {
         payload: Joi.object({
@@ -20,17 +20,19 @@ const mlRoutes = [
     },
     handler: async (request, h) => {
       try {
+        console.log('Request payload:', request.payload);
+
         const { image } = request.payload;
         const fileBuffer = image._data;
         const fileName = image.hapi.filename;
 
-        // Upload the image to Cloud Storage
+        // Upload gambar ke Cloud Storage
         await uploadToCloudStorage(fileBuffer, fileName);
 
-        return h.response({ message: 'Image uploaded successfully' }).code(200);
+        return h.response({ message: 'Gambar berhasil diunggah' }).code(200);
       } catch (error) {
         console.error('Error uploading image:', error);
-        return h.response({ message: 'Server error' }).code(500);
+        return h.response({ message: 'Terjadi kesalahan server' }).code(500);
       }
     },
   },
