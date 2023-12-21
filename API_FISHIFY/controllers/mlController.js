@@ -9,6 +9,7 @@ const cloudStoragePath = 'upload_picture';
 
 const uploadToCloudStorage = async (fileBuffer, fileName) => {
   try {
+    console.log('fileBuffer:', fileBuffer);
     if (!fileBuffer) {
       throw new Error('fileBuffer is undefined or null');
     }
@@ -23,6 +24,7 @@ const uploadToCloudStorage = async (fileBuffer, fileName) => {
     throw error;
   }
 };
+
 
 
 module.exports = { uploadToCloudStorage };
