@@ -1,13 +1,11 @@
 const { Storage } = require('@google-cloud/storage');
-const axios = require('axios');
 
-const projectId = 'loyal-world-406507'; // Ganti dengan ID proyek Google Cloud Anda
-const bucketName = 'fishify'; // Ganti dengan nama bucket Cloud Storage Anda
-const cloudRunEndpoint = 'https://fishify-ml-vdvzsu6mbq-uc.a.run.app'; // Ganti dengan URL Cloud Run Anda
+const projectId = 'loyal-world-406507'; // Replace with your Google Cloud project ID
+const bucketName = 'fishify'; // Replace with your Cloud Storage bucket name
 
 const storage = new Storage({ projectId });
 const bucket = storage.bucket(bucketName);
-const cloudStoragePath = 'upload_picture'; // Ganti dengan path yang diinginkan di dalam bucket
+const cloudStoragePath = 'upload_picture'; // Replace with the desired path in the bucket
 
 const uploadToCloudStorage = async (fileBuffer, fileName) => {
   try {
@@ -22,36 +20,4 @@ const uploadToCloudStorage = async (fileBuffer, fileName) => {
   }
 };
 
-const callCloudRun = async (fileName) => {
-  try {
-    const response = await axios.post(cloudRunEndpoint, { fileName });
-
-    if (response.status !== 200) {
-      console.error('Error calling Cloud Run:', response.statusText);
-      throw new Error('Failed to call Cloud Run');
-    }
-
-    const result = response.data;
-    console.log('Cloud Run response:', result);
-    return result;
-  } catch (error) {
-    console.error('Error calling Cloud Run:', error);
-    throw error;
-  }
-};
-
-const processImageAndDetectFish = async (fileBuffer, fileName) => {
-  try {
-    // Upload gambar ke Cloud Storage
-    const cloudStorageFile = await uploadToCloudStorage(fileBuffer, fileName);
-
-    // Panggil Cloud Run dengan parameter nama file
-    const cloudRunResult = await callCloudRun(cloudStorageFile.name);
-    return cloudRunResult;
-  } catch (error) {
-    console.error('Error processing image and detecting fish:', error);
-    throw error;
-  }
-};
-
-module.exports = { processImageAndDetectFish };
+module.exports = { uploadToCloudStorage };
