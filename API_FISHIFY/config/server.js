@@ -8,6 +8,7 @@ const { testConnection } = require('./config/database');
 const authRoutes = require('./routes/authRoutes');
 const userRoutes = require('./routes/userRoutes');
 const loginRoutes = require('./routes/loginRoutes');
+const mlRoutes = require('./path/to/mlRoutes'); 
 
 const init = async () => {
   try {
@@ -54,8 +55,8 @@ const initServer = async () => {
     },
   ]);
 
-  // Daftar routes dari authRoutes, userRoutes, and loginRoutes
-  const routes = [...authRoutes, ...userRoutes, ...loginRoutes];
+  // Daftar routes dari authRoutes, userRoutes, loginRoutes, dan mlRoutes
+  const routes = [...authRoutes, ...userRoutes, ...loginRoutes, ...mlRoutes];
   server.route(routes);
 
   return server;
