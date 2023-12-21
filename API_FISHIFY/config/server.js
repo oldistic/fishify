@@ -1,5 +1,6 @@
 const Hapi = require('@hapi/hapi');
 const HapiPino = require('hapi-pino');
+const HapiBodyParser = require('hapi-bodyparser');
 const { testConnection } = require('./config/database');
 const authRoutes = require('./routes/authRoutes');
 const userRoutes = require('./routes/userRoutes');
@@ -37,10 +38,12 @@ const initServer = async () => {
     },
   });
 
-  // Registrasi plugin untuk menangani payload JSON
-  await server.register({
-    plugin: require('hapi-bodyparser'),
-  });
+  // Registrasi plugin untuk menangani payload JSON dan form data
+  await server.register([
+    {
+      plugin: HapiBodyParser,
+    },
+  ]);
 
   // Daftar routes dari authRoutes, userRoutes, and loginRoutes
   const routes = [...authRoutes, ...userRoutes, ...loginRoutes];
