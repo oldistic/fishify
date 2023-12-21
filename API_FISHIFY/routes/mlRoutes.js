@@ -5,13 +5,13 @@ const mlRoutes = [
   {
     method: 'POST',
     path: '/upload',
-   options: {
-    payload: {
-      parse: true,
-      output: 'data',
-      maxBytes: 209715200, // 200MB
-      multipart: { output: 'file' },
-    },
+    options: {
+      payload: {
+        parse: true,
+        output: 'data', // Menggunakan 'data' untuk mendapatkan buffer langsung
+        maxBytes: 209715200, // 200MB
+        multipart: { output: 'file' },
+      },
     },
     handler: async (request, h) => {
       try {
@@ -20,11 +20,9 @@ const mlRoutes = [
         console.log('Actual Boundary in Content-Type:', request.headers['content-type'].split('boundary=')[1]);
 
         const { image } = request.payload;
-        const fileBuffer = image._data;
-        const fileName = image.filename;
 
         // Upload gambar ke Cloud Storage
-        await uploadToCloudStorage(fileBuffer, fileName);
+        await uploadToCloudStorage(image, image.filename);
 
         return h.response({ message: 'Gambar berhasil diunggah' }).code(200);
       } catch (error) {
