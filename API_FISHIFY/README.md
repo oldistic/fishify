@@ -5,40 +5,47 @@ Fishify API adalah bagian dari aplikasi Fishify, yang bertujuan untuk mendeteksi
 
 ## Instalasi
 
-### Clone repositori:
+- Clone repositori:
 
-Copy code: git clone https://github.com/oldistic/fishify.git
+Copy code: 
 
-### Pindah ke direktori proyek:
+``` git clone https://github.com/oldistic/fishify.git ```
 
-Copy code: cd fishify-api
+- Pindah ke direktori proyek:
+
+Copy code: 
+
+``` cd fishify-api ```
 
 ### Instal dependensi:
 
-Copy code: npm install
+Copy code: 
+
+``` npm install ```
 
 ## Penggunaan
 
-### Mulai server:
+- Mulai server:
 
-Copy code: npm start
+Copy code: 
+``` npm start ```
 
 Tim pengembang mobile dapat menggunakan API yang di-host di http://localhost:4000.
 
 ## Endpoint API
 
-### Autentikasi
+- Autentikasi
 
-POST /register: Mendaftarkan pengguna baru.
+  - POST /register: Mendaftarkan pengguna baru.
 
-POST /login: Melakukan login dan mengembalikan token otentikasi.
+  - POST /login: Melakukan login dan mengembalikan token otentikasi.
 
-### Resep
+- Resep
 
-GET /recipes/{id}: Mendapatkan informasi resep berdasarkan ID.
+  - GET /recipes/{id}: Mendapatkan informasi resep berdasarkan ID.
 
-GET /recipes/name/{name}: Mendapatkan informasi resep berdasarkan nama.
+  - GET /recipes/name/{name}: Mendapatkan informasi resep berdasarkan nama.
 
-### Gambar
+- Gambar
 
-POST /upload: Mengunggah gambar ke penyimpanan awan.
+  - POST /upload: Mengunggah gambar ke penyimpanan awan.
