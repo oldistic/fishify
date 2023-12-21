@@ -22,7 +22,7 @@ const mlRoutes = [
         const { image } = request.payload;
 
         // Upload gambar ke Cloud Storage
-        await uploadToCloudStorage(image, image.filename);
+        await uploadToCloudStorage(image._data, image.filename);
 
         return h.response({ message: 'Gambar berhasil diunggah' }).code(200);
       } catch (error) {
