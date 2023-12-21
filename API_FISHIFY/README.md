@@ -1,18 +1,41 @@
 # Fishify
 ## Fishify: Consumable Fish Detection Application Repository
 
-### Capstone Project Team CH2-PS496
+Fishify API adalah bagian dari aplikasi Fishify, yang bertujuan untuk mendeteksi ikan. Tim pengembang terbagi menjadi tiga: tim pengembang mobile develpopment(MD)yang bertugas membangun tampilan aplikasi, tim pegembang machine learning (ML) yang betugas membuat model dan tim cloud computing (CC) yang bertugas membuat API. API ini menggunakan teknologi RESTful dengan MySQL di Google Cloud Platform dan framework Hapi.
 
-#### Team Member
+### Instalasi
+Clone repositori:
 
-- Fachru Rozi (M008BSY0551) - Machine Learning - Gadjah Mada University
-- Alif Fatullah (M306BSY1926) - Machine Learning- President University
-- Brian Natanael Nainggolan (M465BSY0647) - Machine Learning - Putera Batam University 
-- Stefano Aldo Budi Satria (C008BSY3823) - Cloud Computing - Gadjah Mada University
-- Michael Ariestian (C465BSY4212) - Cloud Computing - Putera Batam University
-- Khisal (A465BSY2235) - Mobile Development - Putera Batam University
+Copy code
+git clone https://github.com/oldistic/fishify.git
+Pindah ke direktori proyek:
 
-File for each path:
-- [Machine Learning](https://github.com/oldistic/fishify/tree/machine-learning)
-- [Mobile Development](https://github.com/oldistic/fishify/tree/mobile-development)
-- [Cloud Computing](https://github.com/oldistic/fishify/main)
+
+Copy code
+cd fishify-api
+Instal dependensi:
+
+
+Copy code
+npm install
+
+Penggunaan
+Mulai server:
+
+Copy code
+npm start
+
+Tim pengembang mobile dapat menggunakan API yang di-host di http://localhost:4000.
+
+### Endpoint API
+
+Autentikasi
+POST /register: Mendaftarkan pengguna baru.
+POST /login: Melakukan login dan mengembalikan token otentikasi.
+
+Resep
+GET /recipes/{id}: Mendapatkan informasi resep berdasarkan ID.
+GET /recipes/name/{name}: Mendapatkan informasi resep berdasarkan nama.
+
+Gambar
+POST /upload: Mengunggah gambar ke penyimpanan awan.
