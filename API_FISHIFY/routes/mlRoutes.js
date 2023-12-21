@@ -1,4 +1,3 @@
-const { processImageAndDetectFish } = require('../controllers/mlController');
 const Joi = require('@hapi/joi');
 
 const mlRoutes = [
@@ -10,11 +9,16 @@ const mlRoutes = [
         output: 'stream',
         parse: true,
         allow: 'multipart/form-data',
-        maxBytes: 10 * 1024 * 1024, // Set batas ukuran file (2MB)
+        maxBytes: 10 * 1024 * 1024, // Set batas ukuran file (10MB)
       },
       validate: {
         payload: Joi.object({
-          image: Joi.any().required(),
+          image: Joi.object({
+            _data: Joi.binary().required(),
+            hapi: Joi.object({
+              filename: Joi.string().regex(/\.(jpg|jpeg|png)$/).required(),
+            }).required(),
+          }).required(),
         }),
       },
     },
