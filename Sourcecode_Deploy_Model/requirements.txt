@@ -1,0 +1,9 @@
+Flask
+gunicorn
+google-cloud-storage
+pillow
+numpy
+tensorflow
+keras
+pandas
+chardet
