@@ -20,6 +20,7 @@ const mlRoutes = [
     },
     handler: async (request, h) => {
       try {
+        console.log('Entering /upload-image handler function'); // Tambahkan log ini
         console.log('Request payload:', request.payload);
 
         const { image } = request.payload;
