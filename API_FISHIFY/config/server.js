@@ -1,6 +1,9 @@
 const Hapi = require('@hapi/hapi');
 const HapiPino = require('hapi-pino');
 const HapiBodyParser = require('hapi-bodyparser');
+const Inert = require('@hapi/inert');
+const Multipart = require('hapi-multipart');
+
 const { testConnection } = require('./config/database');
 const authRoutes = require('./routes/authRoutes');
 const userRoutes = require('./routes/userRoutes');
@@ -38,10 +41,16 @@ const initServer = async () => {
     },
   });
 
-  // Registrasi plugin untuk menangani payload JSON dan form data
+  // Registrasi plugin untuk menangani payload JSON
   await server.register([
     {
       plugin: HapiBodyParser,
+    },
+    {
+      plugin: Inert,
+    },
+    {
+      plugin: Multipart,
     },
   ]);
 
