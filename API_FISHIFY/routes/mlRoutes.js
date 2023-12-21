@@ -18,15 +18,12 @@ const mlRoutes = [
         console.log('Entering /upload-image handler function');
         console.log('Request payload:', request.payload);
         console.log('Actual Boundary in Content-Type:', request.headers['content-type'].split('boundary=')[1]);
-    
+
         const { image } = request.payload;
-    
-        // Tambahkan log untuk menampilkan struktur image
-        console.log('Image:', image);
-    
+
         // Upload gambar ke Cloud Storage
         await uploadToCloudStorage(image._data, image.filename);
-    
+
         return h.response({ message: 'Gambar berhasil diunggah' }).code(200);
       } catch (error) {
         console.error('Error uploading image:', error);
