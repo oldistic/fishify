@@ -20,8 +20,9 @@ const mlRoutes = [
     },
     handler: async (request, h) => {
       try {
-        console.log('Entering /upload-image handler function'); // Tambahkan log ini
+        console.log('Entering /upload-image handler function');
         console.log('Request payload:', request.payload);
+        console.log('Actual Boundary in Content-Type:', request.headers['content-type'].split('boundary=')[1]);
 
         const { image } = request.payload;
         const fileBuffer = image._data;
