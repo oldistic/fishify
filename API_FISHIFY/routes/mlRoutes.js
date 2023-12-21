@@ -21,7 +21,7 @@ const mlRoutes = [
 
         const { image } = request.payload;
         const fileBuffer = image._data;
-        const fileName = image.hapi.filename;
+        const fileName = image.filename;
 
         // Upload gambar ke Cloud Storage
         await uploadToCloudStorage(fileBuffer, fileName);
