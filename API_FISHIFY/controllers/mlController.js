@@ -10,8 +10,7 @@ const cloudStoragePath = 'upload_picture'; // Replace with the desired path in t
 const uploadToCloudStorage = async (fileBuffer, fileName) => {
   try {
     const file = bucket.file(`${cloudStoragePath}/${fileName}`);
-    await file.save(fileBuffer);
-
+    await file.save(Buffer.from(fileBuffer));
     console.log(`File ${fileName} uploaded to Cloud Storage`);
     return file;
   } catch (error) {
