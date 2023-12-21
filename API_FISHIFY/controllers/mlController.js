@@ -5,12 +5,14 @@ const bucketName = 'fishify'; // Replace with your Cloud Storage bucket name
 
 const storage = new Storage({ projectId });
 const bucket = storage.bucket(bucketName);
-const cloudStoragePath = 'upload_picture'; // Replace with the desired path in the bucket
+const cloudStoragePath = 'upload_picture'; 
 
 const uploadToCloudStorage = async (fileBuffer, fileName) => {
   try {
+    console.log('File Buffer:', fileBuffer); 
     const file = bucket.file(`${cloudStoragePath}/${fileName}`);
     await file.save(Buffer.from(fileBuffer));
+
     console.log(`File ${fileName} uploaded to Cloud Storage`);
     return file;
   } catch (error) {
