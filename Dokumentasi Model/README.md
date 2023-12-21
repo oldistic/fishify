@@ -1,0 +1,3 @@
+- CloudShell_Filename : merupakaan tampilan file source code/pendukung main.py pada CloudShell untuk di Deploy pada CloudRun
+- CloudRun_Filename : merupakan tampilan service yang sudah di upload di CloudRun
+- Postman_Filename : merupakan tampilan postman ketika service dijalankan setelah di deploy di CLoudRun.
