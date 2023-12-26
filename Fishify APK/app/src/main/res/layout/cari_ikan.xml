@@ -1,0 +1,35 @@
+<!-- activity_search_recipes.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.Recomendation.SearchRecipesActivity">
+
+    <!-- EditText untuk memasukkan nama ikan -->
+    <EditText
+        android:id="@+id/editTextSearchFish"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Fish Name"
+        android:layout_margin="16dp"/>
+
+    <!-- Button untuk memulai pencarian -->
+    <Button
+        android:id="@+id/buttonSearchFish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Search"
+        android:layout_below="@id/editTextSearchFish"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"/>
+
+    <!-- RecyclerView untuk menampilkan hasil pencarian -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewFishResults"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/buttonSearchFish"
+        android:layout_marginTop="16dp"/>
+
+</RelativeLayout>

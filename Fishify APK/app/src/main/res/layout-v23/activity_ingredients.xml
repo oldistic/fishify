@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.resep.IngredientsActivity">
+
+    <ImageView
+        android:id="@+id/ivtoner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="27dp"
+        android:clickable="true"
+        android:contentDescription="Todo"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackground"
+        app:layout_constraintEnd_toStartOf="@+id/ivsunscreen"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:srcCompat="@drawable/mangutlele"
+        tools:ignore="HardcodedText,MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/ivsunscreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toEndOf="@+id/ivtoner"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:srcCompat="@drawable/krengsenganlele"
+        tools:ignore="ContentDescription,MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/ivserum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8"
+        app:srcCompat="@drawable/ricaricalele"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="143dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/poppinsregular"
+        android:text="@string/sambalkemangi"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/ivmoist"
+        app:layout_constraintStart_toStartOf="@+id/ivmoist"
+        app:layout_constraintTop_toBottomOf="@+id/ivmoist"
+        tools:ignore="TextSizeCheck" />
+
+    <ImageView
+        android:id="@+id/ivmoist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintStart_toEndOf="@+id/ivserum"
+        app:layout_constraintTop_toBottomOf="@+id/textView9"
+        app:srcCompat="@drawable/sambalkemangilele"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/poppinsregular"
+        android:text="@string/mangutlele"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/ivtoner"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/ivtoner"
+        app:layout_constraintTop_toBottomOf="@+id/ivtoner"
+        android:textAlignment="center"/>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="372dp"
+        android:layout_height="24dp"
+        android:fontFamily="@font/poppinsregular"
+        android:text="@string/recipe"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.41"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.027"
+        tools:ignore="TextSizeCheck" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/poppinsregular"
+        android:text="@string/krengseng"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/ivsunscreen"
+        app:layout_constraintStart_toStartOf="@+id/ivsunscreen"
+        app:layout_constraintTop_toBottomOf="@+id/ivsunscreen" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/poppinsregular"
+        android:text="@string/ricarica"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/ivserum"
+        app:layout_constraintStart_toStartOf="@+id/ivserum"
+        app:layout_constraintTop_toBottomOf="@+id/ivserum" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
